@@ -11,7 +11,7 @@ import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import SponsorRedBull from "@/assets/SponsorRedBull.png";
 import SponsorForbes from "@/assets/SponsorForbes.png";
 import SponsorFortune from "@/assets/SponsorFortune.png";
-import { HomeContent } from '@/components';
+import { HomeContent, HomeCTA } from '@/components';
 
 
 type HomeProps = {
@@ -39,9 +39,7 @@ const Home: React.FC<HomeProps> = ({setSelectedPage}) => {
                     />
 
                     {/** ACTIONS */}
-                    <div>
-
-                    </div>
+                    <HomeCTA setSelectedPage={setSelectedPage} />
                 </div>
                 {/** IMAGE */}
                 <div>
