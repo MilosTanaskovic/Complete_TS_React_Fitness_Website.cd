@@ -8,10 +8,8 @@ import { SelectedPage } from '@/shared/types';
 
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
-import SponsorRedBull from "@/assets/SponsorRedBull.png";
-import SponsorForbes from "@/assets/SponsorForbes.png";
-import SponsorFortune from "@/assets/SponsorFortune.png";
-import { HomeContent, HomeCTA } from '@/components';
+
+import { HomeContent, HomeCTA, HomeImage, Sponsors } from '@/components';
 
 
 type HomeProps = {
@@ -29,7 +27,7 @@ const Home: React.FC<HomeProps> = ({setSelectedPage}) => {
             {/** IMAGE AND MAIN HEADER */}
             <motion.div
                 onViewportEnter={() => setSelectedPage(SelectedPage.HOME)}
-                className="mx-auto w-5/6 items-center justify-center mb:flex md:h-5/6"
+                className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
             >
                 {/** MAIN HEADER */}
                 <div className="z-10 mt-32 mb:basis-3/5">
@@ -42,15 +40,13 @@ const Home: React.FC<HomeProps> = ({setSelectedPage}) => {
                     <HomeCTA setSelectedPage={setSelectedPage} />
                 </div>
                 {/** IMAGE */}
-                <div>
-                  
-                </div>
+                <HomeImage image={HomePageGraphic} />
             </motion.div>
 
             {/** SPONSORS */}
-            <div>
-
-            </div>
+            {isAboveMediumScreens && (
+                <Sponsors />
+            )}
         </section>
     )
 }
