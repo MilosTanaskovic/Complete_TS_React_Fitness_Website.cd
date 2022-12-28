@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { motion } from 'framer-motion'
-import { ActionButton } from '@/components';
+import { ActionButton, LinkRM } from '@/components';
 import { SelectedPage } from '@/shared/types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -28,13 +28,13 @@ const HomeCTA: React.FC<HomeCTAProps> = ({setSelectedPage}) => {
             >
                 Join Now
             </ActionButton>
-            <AnchorLink
+            <LinkRM
                 className="text-sm font-bold text-primary-500 underline hover:text-secondary-500 hover:cursor-pointer"
                 onClick={() => setSelectedPage(SelectedPage.CONTACTUS)}
                 href={`#${SelectedPage.CONTACTUS}`}
             >
-                <p>Learn More</p>
-            </AnchorLink>
+                Learn More
+            </LinkRM>
         </motion.div>
     )
 }
