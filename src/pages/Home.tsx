@@ -9,7 +9,7 @@ import { SelectedPage } from '@/shared/types';
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 
-import { HomeContent, HomeCTA, HomeImage, Sponsors } from '@/components';
+import { HeroImage, HomeContent, HomeCTA, Sponsors } from '@/components';
 
 
 type HomeProps = {
@@ -40,7 +40,15 @@ const Home: React.FC<HomeProps> = ({setSelectedPage}) => {
                     <HomeCTA setSelectedPage={setSelectedPage} />
                 </div>
                 {/** IMAGE */}
-                <HomeImage image={HomePageGraphic} />
+                <div className="flex basis-3/5 justify-center 
+                        md:z-10 md:ml-40 md:mt-16 md:justify-items-end"
+            
+                >
+                    <HeroImage 
+                        image={HomePageGraphic} 
+                        alt="evolutionary fitness" 
+                    />
+                </div>
             </motion.div>
 
             {/** SPONSORS */}
