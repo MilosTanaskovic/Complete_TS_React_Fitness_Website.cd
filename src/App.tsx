@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { NavBar } from './components'
 import { SelectedPage } from '@/shared/types'
-import { Benefits, ContactUs, Home, OurClasses } from '@/pages';
+import { Benefits, ContactUs, Footer, Home, OurClasses } from '@/pages';
 
 
 
@@ -43,6 +43,7 @@ function App() {
       <ContactUs 
         setSelectedPage={setSelectedPage}
       />
+      <Footer />
     </div>
   )
 }

@@ -3,15 +3,11 @@ import { useForm } from 'react-hook-form';
 
 import { Body } from '.';
 
-type ContactFormProps = {
-    
-}
-
 const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
 px-5 py-3 placeholder-white`;
 const errorStyles = `mt-1 text-primary-500`;
 
-const ContactForm: React.FC<ContactFormProps> = ({}) => {
+const ContactForm: React.FC = ({}) => {
 
     const {
         register,
