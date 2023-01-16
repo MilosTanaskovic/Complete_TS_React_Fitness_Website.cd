@@ -11,3 +11,4 @@ export {default as Benefit} from './Benefit';
 export {default as HeadingSmall} from './HeadingSmall';
 export {default as LinkRM} from './LinkRM';
 export {default as Class} from './Class';
+export {default as ContactForm} from './ContactForm';
